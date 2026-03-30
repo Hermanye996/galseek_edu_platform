@@ -299,7 +299,7 @@ flowchart TD
         F1 -.-> Fh[查看历史提交与批改记录]
     end
 
-    subgraph R["5. 申请认证（v2.0）"]:::future
+    subgraph R["5. 申请认证（v2.0）"]
         F6 --> R1{满足前置条件?}
         R1 -->|否| R1x[继续学习和实训]
         R1 -->|是| R2[系统带入学习记录]
@@ -309,6 +309,8 @@ flowchart TD
         R4 -->|拒绝| R6[查看原因，修改后重新申请]:::warn
         R6 --> R3
     end
+
+    style R fill:#F3E8FF,stroke:#8B5CF6,stroke-width:2px,stroke-dasharray:5 5
 ```
 
 **实训任务提交状态说明**
@@ -368,7 +370,7 @@ flowchart TD
         B3 -.->|🔓 权限已开启| E2[编辑实训任务内容]
     end
 
-    subgraph R["6. 申请教师认证（v2.0）"]:::future
+    subgraph R["6. 申请教师认证（v2.0）"]
         G6 --> R1[确认授课记录]
         R1 --> R2[提交认证申请]
         R2 --> R3{审核结果}
@@ -376,6 +378,8 @@ flowchart TD
         R3 -->|拒绝| R5["查看原因，修改重申"]:::warn
         R5 --> R2
     end
+
+    style R fill:#F3E8FF,stroke:#8B5CF6,stroke-width:2px,stroke-dasharray:5 5
 ```
 
 #### 4.4.3 院校管理员旅程
@@ -476,7 +480,7 @@ flowchart TD
         O5 -.->|续期| O1
     end
 
-    subgraph R["4. 认证审核（v2.0）"]:::future
+    subgraph R["4. 认证审核（v2.0）"]
         O1 --> R1[查看申请列表]
         R1 --> R2{审核}
         R2 -->|通过| R3["发放证书"]:::ok
@@ -487,6 +491,8 @@ flowchart TD
         R3 & R4 --> M1["v1.0: 基础数据列表"]
         M1 -.->|v3.0| M2["可视化看板\n按院校/时间下钻"]:::future
     end
+
+    style R fill:#F3E8FF,stroke:#8B5CF6,stroke-width:2px,stroke-dasharray:5 5
 ```
 
 **院校授权状态与单项授权优先级：**
